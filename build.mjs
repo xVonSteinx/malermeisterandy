@@ -4,7 +4,7 @@
  *   node build.mjs "PASSWORT"
  *
  * Die Seite wird mit AES-256-GCM verschluesselt, der Schluessel per
- * PBKDF2-SHA256 (250.000 Runden) aus dem Passwort abgeleitet. Im Repo
+ * PBKDF2-SHA256 (1.000.000 Runden) aus dem Passwort abgeleitet. Im Repo
  * liegt nur der verschluesselte Text — ohne Passwort ist er wertlos.
  * Entschluesselt wird im Browser per WebCrypto (nur ueber https).
  */
@@ -17,7 +17,7 @@ if (!passwort) {
   process.exit(1);
 }
 
-const ITER  = 250000;
+const ITER  = 1000000;   // hoeher, weil das Passwort kurz ist
 const quelle = readFileSync(new URL('./quelle/index.html', import.meta.url));
 
 const salt = randomBytes(16);
