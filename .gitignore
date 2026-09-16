@@ -1,3 +1,5 @@
 # Die unverschluesselte Originalseite bleibt ausschliesslich lokal.
-# Nur die verschluesselte index.html gehoert ins Repository.
 quelle/
+
+# Das Bauskript gehoert nicht ins oeffentliche Repository.
+build.mjs
