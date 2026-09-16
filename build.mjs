@@ -17,7 +17,8 @@ if (!passwort) {
   process.exit(1);
 }
 
-const ITER  = 1000000;   // hoeher, weil das Passwort kurz ist
+const ITER  = 1000000;
+const STAND = new Date().toLocaleString('de-DE', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });   // hoeher, weil das Passwort kurz ist
 const quelle = readFileSync(new URL('./quelle/index.html', import.meta.url));
 
 const salt = randomBytes(16);
@@ -35,6 +36,9 @@ const gate = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Malermeister Andy — geschützte Vorschau</title>
 <link rel="icon" href="https://www.malermeister-andy.de/bilder/logo.webp">
 <style>
@@ -85,7 +89,8 @@ button:disabled{opacity:.6;cursor:default}
     <div id="meldung"></div>
   </form>
 
-  <p class="fuss">AES-256-GCM · PBKDF2-SHA256 mit ${ITER.toLocaleString('de-DE')} Runden</p>
+  <p class="fuss">AES-256-GCM · PBKDF2-SHA256 mit ${ITER.toLocaleString('de-DE')} Runden<br>
+    Stand: ${STAND}</p>
 </div>
 
 <script>
