@@ -4,3 +4,6 @@ quelle/
 # Das Bauskript gehoert nicht ins oeffentliche Repository.
 build.mjs
 bilder-neu/
+werkzeug/
+build-offen.mjs
+test-offen/
