@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Malermeister Andy</title>
+<script>
+/* Alte oder direkt eingetippte Unterseiten (z. B. /kontakt, /impressum.html)
+   auf den passenden Bereich der Seite umleiten. Unbekanntes -> Startseite. */
+(function () {
+  var p = location.pathname.toLowerCase()
+    .replace(/\/+$/, '')
+    .replace(/\.(html?|php)$/, '')
+    .replace(/^\/malermeisterandy/, '');
+  var teile = p.split('/').filter(Boolean);
+  var wort = teile.join('-');
+  var ziel = {
+    'start': 'start', 'home': 'start', 'index': 'start', 'startseite': 'start',
+    'leistungen': 'leistungen', 'leistung': 'leistungen', 'service': 'leistungen', 'services': 'leistungen',
+    'kontakt': 'kontakt', 'contact': 'kontakt',
+    'anfrage': 'anfrage', 'angebot': 'anfrage', 'projekt-anfragen': 'anfrage',
+    'ueber': 'ueber', 'ueber-mich': 'ueber', 'ueber-uns': 'ueber', 'uber-uns': 'ueber', 'about': 'ueber', 'team': 'ueber',
+    'impressum': 'impressum', 'imprint': 'impressum',
+    'datenschutz': 'datenschutz', 'datenschutzerklaerung': 'datenschutz', 'privacy': 'datenschutz',
+    'videos': 'videos', 'video': 'videos', 'youtube': 'videos',
+    'live': 'live', 'twitch': 'live', 'links': 'links'
+  };
+  var r = ziel[wort] || (teile[0] && ziel[teile[0]]) || 'start';
+  location.replace('/' + (r === 'start' ? '' : '#/' + r));
+})();
+</script>
+</head>
+<body style="font-family:system-ui,sans-serif;text-align:center;padding:48px 16px">
+<p>Weiter zu <a href="/">malermeister-andy.de</a> …</p>
+</body>
+</html>
