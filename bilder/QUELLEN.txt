@@ -5,7 +5,8 @@ andy-portrait.jpg    Studiofoto von Andy (fotos/20240926-13722.jpg)
 
 Platzhalter mit Unsplash-Lizenz (kostenlos, kommerziell nutzbar, keine Namensnennung noetig).
 Durch echte Projektfotos von Andy ersetzen, sobald vorhanden:
-leistung-tapezieren.jpg   https://unsplash.com/photos/MIW7hXYAVpk
 leistung-lackieren.jpg    https://unsplash.com/photos/rIcDuE91HWk
-leistung-fugenlos.jpg     https://images.unsplash.com/photo-1662624914003-9bb2095ca7a0 (Suche "microcement bathroom")
 leistung-vorarbeiten.jpg  https://unsplash.com/photos/Re1O5byZ8bY
+
+Eigene Fotos von Andy (Stand 14.11.2026, von Paul geliefert):
+leistung-tapezieren.jpg, leistung-boeden.jpg, leistung-betonoptik.jpg, leistung-fugenlos.jpg
